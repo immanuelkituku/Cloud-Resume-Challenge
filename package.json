@@ -1,0 +1,25 @@
+{
+  "name": "cloud-resume-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass-watch": "sass --watch src/scss:dist/css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/immanuelkituku/Cloud-Resume-Challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/immanuelkituku/Cloud-Resume-Challenge/issues"
+  },
+  "homepage": "https://github.com/immanuelkituku/Cloud-Resume-Challenge#readme",
+  "devDependencies": {
+    "sass": "^1.99.0"
+  }
+}
