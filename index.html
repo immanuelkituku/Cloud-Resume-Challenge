@@ -6,6 +6,114 @@
     <title>Immanuel Kituku | Resume</title>
 </head>
 <body>
-    
+    <nav>
+        <span>IK</span>
+        <ul>
+            <li>ABOUT</li>
+            <li>EXPERIENCE</li>
+            <li>SKILLS</li>
+            <li>CONTACT</li>
+        </ul>
+    </nav>
+    <section>
+        <h3>Cloud & Infrastructure Engineer</h3>
+        <h1>
+            <span>Immanuel</span>
+            <span>Kituku.</span>
+        </h1>
+        <p>3 years building enterprise infrastructure — VMware, AWS, Linux automation — now moving fully into cloud engineering and DevOps. AWS Certified. Based in Nairobi, open to remote.</p>
+        <a href="https://example.com/cv.pdf" target="_blank">Download CV</a>
+        <a href="https://example.com/projects" target="_blank">View Projects</a>
+    </section>
+
+    <!-- CV Information -->
+    <section>
+        <!-- Certifications & Skills Section -->
+        <section>
+            <!-- Certifications -->
+            <section>
+                <h2>Certifications</h2>
+                <ul>
+                    <li>AWS Certified Solutions Architect – Associate</li>
+                    <li>Microsoft Certified: Azure Fundamentals</li>
+                    <li>Red Hat Certified System Administrator (RHCSA)</li>
+                </ul>
+            </section>
+
+            <!-- Skills -->
+            <section>
+                <h2>Skills</h2>
+                <ul>
+                    <li>Cloud Platforms: AWS, Azure</li>
+                    <li>Infrastructure as Code: Terraform, CloudFormation</li>
+                    <li>Containerization: Docker, Kubernetes</li>
+                    <li>CI/CD Tools: Jenkins, GitLab CI</li>
+                    <li>Scripting: Bash, Python</li>
+                </ul>
+            </section>
+            <!-- Visitor Counter -->
+            <section>
+                <h2>Visitor Count</h2>
+                <p id="visitor-count">0</p>
+                <p>Page Views</p>
+                <p>Powered by AWS Lambda + DynamoDB</p>
+                <script>
+                    // Simple visitor counter using localStorage
+                    let count = localStorage.getItem('visitorCount') || 0;
+                    count++;
+                    localStorage.setItem('visitorCount', count);
+                    document.getElementById('visitor-count').textContent = `Visitors: ${count}`;
+                </script>
+            </section>
+        </section>
+
+        <!-- Summary, Education, Experience, ProjectsSection -->
+        <section>
+            <!-- Summary -->
+            <section>
+                <h2>ABOUT</h2>
+                <p>Infrastructure Officer with 3 years of hands-on experience managing enterprise environments including VMware virtualisation, Veeam backup & DR, Microsoft 365, and Windows Server. Passionate about Linux systems automation and cloud-native infrastructure. Currently transitioning into Cloud & DevOps Engineering, with a focus on AWS, Infrastructure as Code, and CI/CD pipelines.</p>
+            </section>
+            
+            <!-- Education -->
+             <section>
+                <h2>Education</h2>
+                <h3>Bachelor of Science in Computer Science | University of Nairobi | 2016 - 2020</h3>
+                <p>Graduated with First Class Honours. Relevant coursework: Cloud Computing, Network Security, Systems Administration.</p>
+             </section>
+
+             <!-- Experience -->
+            <section>
+                <h2>Experience</h2>
+                <h3>Cloud Engineer | XYZ Corp | 2021 - Present</h3>
+                <ul>
+                    <li>Designed and implemented AWS infrastructure using Terraform, reducing deployment time by 50%.</li>
+                    <li>Managed Kubernetes clusters for microservices applications, improving scalability and reliability.</li>
+                    <li>Automated CI/CD pipelines with Jenkins, increasing deployment frequency by 30%.</li>
+                </ul>
+            </section>
+
+            <!-- Projects -->
+            <section>
+                <h2>Projects</h2>
+                <h3>Cloud Migration Project | ABC Inc | 2022</h3>
+                <p>Led the migration of on-premises applications to the cloud, resulting in a 40% reduction in operational costs.</p>
+            </section>
+        </section>
+    </section>
+    <footer>
+        <p>© 2026 Immanuel Kituku</p>
+        <ul>
+            <li>
+                <span>Email</span>
+            </li>
+            <li>
+                <span>LinkedIn</span>
+            </li>
+            <li>
+                <span>Location</span>
+                <span>Nairobi, Kenya</span>
+            </li>
+        </ul>
 </body>
 </html>
