@@ -1,0 +1,35 @@
+body {
+  font-family: "DM Sans light", sans-serif;
+  background-color: #FAFAF8;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2%;
+  border-bottom: 1px solid #E0DFDA;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #0A0A0A;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,42 @@
+// Theme Color Variables
+$primary-color: #0D6E55;
+$secondary-color: #FAFAF8;
+$near-black: #0A0A0A;
+$border-gray: #E0DFDA;
+
+body {
+    font-family: 'DM Sans light', sans-serif;
+    background-color: $secondary-color;
+    margin: 0;
+    padding: 0;
+}
+
+// Navigation Styles
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    border-bottom: 1px solid $border-gray;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li { 
+    display: inline-block; 
+    margin: 0 10px;
+  }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: $near-black;
+}

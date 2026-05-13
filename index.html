@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Immanuel Kituku | Resume</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&family=DM+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
-        <span>IK</span>
+        <span class="logo">IK</span>
         <ul>
             <li>ABOUT</li>
             <li>EXPERIENCE</li>
@@ -62,7 +64,7 @@
                     let count = localStorage.getItem('visitorCount') || 0;
                     count++;
                     localStorage.setItem('visitorCount', count);
-                    document.getElementById('visitor-count').textContent = `Visitors: ${count}`;
+                    document.getElementById('visitor-count').textContent = `${count}`;
                 </script>
             </section>
         </section>
