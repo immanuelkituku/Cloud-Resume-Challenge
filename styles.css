@@ -1,8 +1,10 @@
+@charset "UTF-8";
 body {
-  font-family: "DM Sans light", sans-serif;
+  font-family: system-ui, sans-serif;
   background-color: #FAFAF8;
   margin: 0;
   padding: 0;
+  color: #5A5955;
 }
 
 nav {
@@ -30,6 +32,58 @@ nav a {
   font-size: 1.5em;
   font-weight: bold;
   color: #0A0A0A;
+}
+
+#summary {
+  padding: 5%;
+  text-align: left;
+}
+#summary h3::before {
+  content: "— ";
+}
+#summary h3 {
+  color: #0D6E55;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-size: small;
+}
+#summary h1 {
+  font-size: 3.5em;
+}
+#summary .first-name {
+  color: #0A0A0A;
+  font-weight: bold;
+  display: block;
+}
+#summary .last-name {
+  color: #0D6E55;
+  font-weight: bold;
+  display: block;
+}
+#summary .summary-text {
+  width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: none;
+  color: #0A0A0A;
+  text-decoration: none;
+  border: 1px solid #E0DFDA;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #F5F4F0;
+}
+
+/* Applies only to screens wider than 1024px (Desktop) */
+@media (min-width: 1024px) {
+  .summary-text {
+    max-width: 60%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

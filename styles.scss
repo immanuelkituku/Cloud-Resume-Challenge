@@ -3,12 +3,15 @@ $primary-color: #0D6E55;
 $secondary-color: #FAFAF8;
 $near-black: #0A0A0A;
 $border-gray: #E0DFDA;
+$body-color: #5A5955;
+$sidebar-bg: #F5F4F0;
 
 body {
-    font-family: 'DM Sans light', sans-serif;
+    font-family: system-ui, sans-serif;
     background-color: $secondary-color;
     margin: 0;
     padding: 0;
+    color: $body-color;
 }
 
 // Navigation Styles
@@ -39,4 +42,58 @@ nav {
     font-size: 1.5em;
     font-weight: bold;
     color: $near-black;
+}
+
+// Professional Summary Styles
+#summary {
+    padding: 5%;
+    text-align: left;
+
+    h3::before {
+      content: "\2014\00a0";
+    }
+    h3 {
+        color: $primary-color;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        font-size: small;
+    }
+    h1 {
+        font-size: 3.5em;
+    }
+    .first-name {
+        color: $near-black;
+        font-weight: bold;
+        display: block;
+    }
+    .last-name {
+        color: $primary-color;
+        font-weight: bold;
+        display: block;
+    }
+
+    .summary-text {
+        width: 100%;
+    }
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: none;
+    color: $near-black;
+    text-decoration: none;
+    border: 1px solid $border-gray;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: $sidebar-bg;
+}
+/* Applies only to screens wider than 1024px (Desktop) */
+@media (min-width: 1024px) {
+  .summary-text {
+    max-width: 60%;
+  }
 }
