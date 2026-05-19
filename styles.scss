@@ -18,7 +18,7 @@ body {
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 2%;
+    padding: 1em;
     border-bottom: 1px solid $border-gray;
   ul {
     margin: 0;
@@ -46,7 +46,7 @@ nav {
 
 // Professional Summary Styles
 #summary {
-    padding: 5%;
+    padding: 7%;
     text-align: left;
 
     h3::before {
@@ -59,7 +59,7 @@ nav {
         font-size: small;
     }
     h1 {
-        font-size: 3.5em;
+        font-size: 4.5em;
     }
     .first-name {
         color: $near-black;

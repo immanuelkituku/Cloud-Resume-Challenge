@@ -10,7 +10,7 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 2%;
+  padding: 1em;
   border-bottom: 1px solid #E0DFDA;
 }
 nav ul {
@@ -35,7 +35,7 @@ nav a {
 }
 
 #summary {
-  padding: 5%;
+  padding: 7%;
   text-align: left;
 }
 #summary h3::before {
@@ -48,7 +48,7 @@ nav a {
   font-size: small;
 }
 #summary h1 {
-  font-size: 3.5em;
+  font-size: 4.5em;
 }
 #summary .first-name {
   color: #0A0A0A;
