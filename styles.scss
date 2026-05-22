@@ -5,6 +5,23 @@ $near-black: #0A0A0A;
 $border-gray: #E0DFDA;
 $body-color: #5A5955;
 $sidebar-bg: #F5F4F0;
+$sidebar-h2: #d6d7d3;
+
+// Utility Classes
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: none;
+    color: $near-black;
+    text-decoration: none;
+    border: 1px solid $border-gray;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: $sidebar-bg;
+}
 
 body {
     font-family: system-ui, sans-serif;
@@ -77,23 +94,41 @@ nav {
     }
 }
 
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: none;
-    color: $near-black;
-    text-decoration: none;
-    border: 1px solid $border-gray;
-    border-radius: 5px;
+// Main Content Styles
+#cv-info {
+  margin: 0;
+  border: 1px solid $border-gray;
 }
 
-.btn:hover {
-    background-color: $sidebar-bg;
+// Sidebar Styles
+#sidebar {
+  background-color: $sidebar-bg;
+  padding: 20px;
+  border-right: 1px solid $border-gray;
+
+  .sidebar-h2 {
+    color: $sidebar-h2;
+    text-transform: uppercase;
+    font-size: small;
+  }
 }
+
 /* Applies only to screens wider than 1024px (Desktop) */
-@media (min-width: 1024px) {
+@media (min-width: 700px) {
   .summary-text {
     max-width: 60%;
+  }
+
+  // Main Content Styles
+  #cv-info {
+    display: flex;
+    margin: 0;
+  }
+
+  // Sidebar Styles
+  #sidebar {
+    background-color: $sidebar-bg;
+    padding: 20px;
+    width: 40%;
   }
 }
