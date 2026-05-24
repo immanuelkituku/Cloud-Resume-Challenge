@@ -5,15 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Immanuel Kituku | Resume</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <nav>
         <span class="logo">IK</span>
         <ul>
-            <li>ABOUT</li>
-            <li>EXPERIENCE</li>
-            <li>SKILLS</li>
-            <li>CONTACT</li>
+            <li><a href="#cv-info">MY CV</a></li>
         </ul>
     </nav>
     <section id="summary">
@@ -23,8 +21,8 @@
             <span class="last-name">Kituku.</span>
         </h1>
         <p class="summary-text">3 years building enterprise infrastructure — VMware, AWS, Linux automation — now moving fully into cloud engineering and DevOps. AWS Certified. Based in Nairobi, open to remote.</p>
-        <a class="btn"href="https://example.com/cv.pdf" target="_blank">Download CV</a>
-        <a class="btn" href="https://example.com/projects" target="_blank">View Projects</a>
+        <a class="btn"href="https://drive.google.com/file/d/12d-D2NlPrmgUwSaQG0fGw1zMx0hMaMz6/view" target="_blank">Download CV</a>
+        <a class="btn" href="https://github.com/immanuelkituku?tab=repositories" target="_blank">View Projects</a>
     </section>
 
     <!-- CV Information -->
@@ -32,12 +30,13 @@
         <!-- Certifications & Skills Section -->
         <section id="sidebar">
             <!-- Certifications -->
-            <section>
+            <section id="certifications">
                 <h2 class="sidebar-h2">Certifications</h2>
                 <ul>
                     <li>AWS Certified Solutions Architect – Associate</li>
-                    <li>Microsoft Certified: Azure Fundamentals</li>
-                    <li>Red Hat Certified System Administrator (RHCSA)</li>
+                    <li>AWS Certified Cloud Practitioner</li>
+                    <li>Microsoft 365 Certified: Fundamentals</li>
+                    <li>Career Essentials in System Administration – Microsoft & LinkedIn</li>
                 </ul>
             </section>
 
@@ -55,9 +54,12 @@
             <!-- Visitor Counter -->
             <section>
                 <h2 class="sidebar-h2">Visitor Count</h2>
-                <p id="visitor-count">0</p>
-                <p>Page Views</p>
-                <p>Powered by AWS Lambda + DynamoDB</p>
+                <div class="count-container">
+                    <p id="visitor-count">0</p>
+                    <p class="p-views">Page Views</p>
+                </div>
+                
+                <p class="caption">Powered by AWS Lambda + DynamoDB</p>
                 <script>
                     // Simple visitor counter using localStorage
                     let count = localStorage.getItem('visitorCount') || 0;
@@ -68,52 +70,111 @@
             </section>
         </section>
 
-        <!-- Summary, Education, Experience, ProjectsSection -->
-        <section>
+        <!-- Summary, Education, Experience, Projects Section -->
+        <section class="info">
             <!-- Summary -->
-            <section>
-                <h2>ABOUT</h2>
-                <p>Infrastructure Officer with 3 years of hands-on experience managing enterprise environments including VMware virtualisation, Veeam backup & DR, Microsoft 365, and Windows Server. Passionate about Linux systems automation and cloud-native infrastructure. Currently transitioning into Cloud & DevOps Engineering, with a focus on AWS, Infrastructure as Code, and CI/CD pipelines.</p>
+            <section class="cv-sections">
+                <h2 class="cv-titles">ABOUT</h2>
+                <p class="p-text">Infrastructure Officer with 3 years of hands-on experience managing enterprise environments including VMware virtualisation, Veeam backup & DR, Microsoft 365, and Windows Server. Passionate about Linux systems automation and cloud-native infrastructure. Currently transitioning into Cloud & DevOps Engineering, with a focus on AWS, Infrastructure as Code, and CI/CD pipelines.</p>
             </section>
             
             <!-- Education -->
              <section>
-                <h2>Education</h2>
-                <h3>Bachelor of Science in Computer Science | University of Nairobi | 2016 - 2020</h3>
-                <p>Graduated with First Class Honours. Relevant coursework: Cloud Computing, Network Security, Systems Administration.</p>
+                <h2 class="cv-titles">Education</h2>
+                <h3 class="cv-subtitles">Bachelor of Science in Computer Science | South Eastern Kenya University | Aug 2018 - Apr 2022</h3>
+                <p class="p-text">Graduated with First Class Honours. Relevant coursework: Cloud Computing, Network Security, Systems Administration.</p>
              </section>
 
              <!-- Experience -->
             <section>
-                <h2>Experience</h2>
-                <h3>Cloud Engineer | XYZ Corp | 2021 - Present</h3>
-                <ul>
-                    <li>Designed and implemented AWS infrastructure using Terraform, reducing deployment time by 50%.</li>
-                    <li>Managed Kubernetes clusters for microservices applications, improving scalability and reliability.</li>
-                    <li>Automated CI/CD pipelines with Jenkins, increasing deployment frequency by 30%.</li>
-                </ul>
+                <h2 class="cv-titles">Experience</h2>
+                <div>
+                    <h3 class="cv-subtitles">ICT Officer - Infrastructure | The Nairobi Hospital, Nairobi | 2023 - Present</h3>
+                    <ul class="p-text">
+                        <li>
+                            Maintain 99%+ uptime across mission-critical infrastructure supporting 2000+ clinical and administrative staff
+                            in a 24/7 hospital environment.
+                        </li>
+                         <li>
+                            Executed a zero-downtime upgrade of primary and secondary domain controllers from Windows Server
+                            2012/2016 to 2022, eliminating end-of-support security exposure across the entire Active Directory
+                            environment.
+                         </li>
+                         <li>
+                            Implemented Privileged Access Management (PAM) via a hardened jump server, enforcing least-privilege
+                            access controls and reducing the hospital's privileged account attack surface.
+                         </li>
+                            Deployed Windows Deployment Services (WDS) to automate OS provisioning, reducing average
+                            workstation deployment time by ~60% and standardising builds across departments.
+                        </li>
+                         <li>
+                            Led a Veeam Backup & Replication consolidation project, reducing the backup infrastructure footprint,
+                            shortening backup windows, and improving recovery point objectives (RPOs) for critical clinical systems.
+                         </li>
+                            Administered Linux (Ubuntu/CentOS/Rocky Linux) and Windows Server environments, maintaining patch
+                            compliance and reducing mean time to resolution (MTTR) through proactive monitoring and log analysis.
+                        </li>
+                        <li>
+                            Drove patch management and vulnerability remediation cycles across Windows and Linux servers, closing
+                            critical CVEs within defined SLA windows and supporting infrastructure hardening audits.
+                        </li>
+                        <li>
+                            Authored and tested disaster recovery runbooks for production systems, ensuring business continuity
+                            compliance within a regulated healthcare environment.
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="cv-subtitles">ICT Intern | The Nairobi Hospital, Nairobi | May 2022 – Jul 2022</h3>
+                    <ul class="p-text">
+                        <li>Provided technical support for Linux and Windows workstations, printers, UPS systems, and network
+                        devices across hospital departments.</li>
+                        <li>Assisted with hardware maintenance, ICT asset inventory, and network troubleshooting under senior
+                        administrators.</li>
+                    </ul>
+                </div>
             </section>
 
             <!-- Projects -->
             <section>
-                <h2>Projects</h2>
-                <h3>Cloud Migration Project | ABC Inc | 2022</h3>
-                <p>Led the migration of on-premises applications to the cloud, resulting in a 40% reduction in operational costs.</p>
+                <h2 class="cv-titles">Projects</h2>
+                <h3 class="cv-subtitles">Cloud Resume Challenge | Personal Project – AWS 2026 – Present</h3>
+                <ul class="p-text">
+                    <li>Architected and deployed a serverless cloud resume using AWS S3 + CloudFront for static hosting, with
+                        HTTPS enforced via ACM and custom domain routing through Route 53.
+                    </li>
+                     <li>
+                        Built a real-time visitor counter using AWS Lambda (Python), API Gateway, and DynamoDB —
+                        demonstrating serverless compute and NoSQL integration end-to-end.
+                    </li>
+                    <li>
+                        Provisioned all infrastructure as code using Terraform, enabling repeatable, version-controlled deployments
+                        with zero manual console configuration.
+                    </li>
+                    <li>
+                        Implemented a full CI/CD pipeline with GitHub Actions, automating infrastructure validation and deployment
+                        on every code push to the main branch.
+                    </li>
+                </ul>
             </section>
         </section>
     </section>
     <footer>
-        <p>© 2026 Immanuel Kituku</p>
-        <ul>
+        <p>
+            <span class="name">Immanuel Kituku</span>
+        </p>
+        <ul class="contacts">
             <li>
-                <span>Email</span>
+                <span><i class="fa fa-envelope"></i>immanuelkituku@gmail.com</span>
             </li>
             <li>
-                <span>LinkedIn</span>
+                <span><i class="fa fa-linkedin"></i>/immanuel-kituku</span>
             </li>
             <li>
-                <span>Location</span>
-                <span>Nairobi, Kenya</span>
+                <span><i class="fa fa-github"></i>/immanuelkituku</span>
+            </li>
+            <li>
+                <span><i class="fa fa-map-marker"></i>Nairobi, Kenya</span>
             </li>
         </ul>
 </body>
