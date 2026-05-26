@@ -1,0 +1,10 @@
+# name: Deploy Cloud Resume Website to S3
+# on: push
+# jobs:
+#   Deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout Code to Runner
+#         uses: actions/checkout@v6
+#       - name: Configure AWS Credentials
+#         uses: 
