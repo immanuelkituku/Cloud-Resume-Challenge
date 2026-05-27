@@ -1,10 +1,35 @@
-# name: Deploy Cloud Resume Website to S3
-# on: push
-# jobs:
-#   Deploy:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout Code to Runner
-#         uses: actions/checkout@v6
-#       - name: Configure AWS Credentials
-#         uses: 
+name: Deploy Cloud Resume Website to S3
+on: push
+
+# Required for OIDC (Grants the workflow permission to request for a token
+permissions:
+  id-token: write  # Request the JWT token
+  contents: read  # Read the repository contents
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code to Runner
+        uses: actions/checkout@v4
+
+      - name: Configure AWS Credentials via OIDC
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Sync files to S3
+        run: | 
+          aws s3 sync . s3://${{ secrets.S3_BUCKET }} \
+            --exclude "*" \
+            --include "index.html" \
+            --include "style.css" \
+            --include "index.js" \
+            --delete
+      - name: Invalidate CLoudFront Cache
+        run: | 
+          aws cloudfront create-invalidation \ 
+            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
+            --paths "/*"
+            
