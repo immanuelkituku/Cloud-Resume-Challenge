@@ -58,15 +58,7 @@
                     <p id="visitor-count">0</p>
                     <p class="p-views">Page Views</p>
                 </div>
-                
                 <p class="caption">Powered by AWS Lambda + DynamoDB</p>
-                <script>
-                    // Simple visitor counter using localStorage
-                    let count = localStorage.getItem('visitorCount') || 0;
-                    count++;
-                    localStorage.setItem('visitorCount', count);
-                    document.getElementById('visitor-count').textContent = `${count}`;
-                </script>
             </section>
         </section>
 
@@ -177,5 +169,6 @@
                 <span><i class="fa fa-map-marker"></i>Nairobi, Kenya</span>
             </li>
         </ul>
+    <script src="index.js"></script>
 </body>
 </html>
