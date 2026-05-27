@@ -24,7 +24,7 @@ jobs:
           aws s3 sync . s3://${{ secrets.S3_BUCKET }} \
             --exclude "*" \
             --include "index.html" \
-            --include "style.css" \
+            --include "styles.css" \
             --include "index.js" \
             --delete
       - name: Invalidate CLoudFront Cache
