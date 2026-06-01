@@ -1,29 +1,14 @@
-// Simple visitor counter using localStorage
-let count = localStorage.getItem('visitorCount') || 0;
-count++;
-localStorage.setItem('visitorCount', count);
-document.getElementById('visitor-count').textContent = `${count}`;
+// Fetching visitor count from DynamoDB via API Gateway
+async function fetchVisitorCount() {
+    try {   
 
+        const response = await fetch('https://x29nzwmwka.execute-api.eu-west-1.amazonaws.com/production/visitorCount');
+        const data = await response.json();
+        document.getElementById('visitor-count').textContent = `${data.visitorCount}`;
+    } catch (error) {
+        console.error('Error fetching visitor count:', error);
+        document.getElementById('visitor-count').textContent = 'Error';
+    }
+}
 
-// Logic for fetching visitor count from DynamoDB via API Gateway
-// 1. Fetch visitor count from DynamoDB
-// 2. Increment count
-// 3. Update count in DynamoDB
-// 4. Display updated count on webpage
-
-// Flow
-// Visitor opens website
-//         ↓
-// JavaScript runs in browser
-//         ↓
-// Calls API Gateway
-//         ↓
-// API Gateway triggers Lambda
-//         ↓
-// Lambda updates DynamoDB
-//         ↓
-// Lambda returns visitor count
-//         ↓
-// JavaScript displays count
-
-// Test
+document.addEventListener('DOMContentLoaded', fetchVisitorCount);
